@@ -1,8 +1,6 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
-using ApiApp;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Threading.Tasks;
+using ApiApp.PostcodesIOService;
 
 namespace APITests.Tests
 {
@@ -34,13 +32,13 @@ namespace APITests.Tests
         [Test]
         public void AdminDistrictAtIndexOne_IsCityOfLondon()
         {
-            Assert.That(_outwardCodeService.ResponseObject.result.admin_district[1], Is.EqualTo("City of London"));
+            Assert.That(_outwardCodeService.OutwardCodeDTO.OutwardCodeResponse.result.admin_district[1], Is.EqualTo("City of London"));
         }
 
         [Test]
         public void Northings_Is181778()
         {
-            Assert.That(_outwardCodeService.ResponseObject.result.northings, Is.EqualTo(181778));
+            Assert.That(_outwardCodeService.OutwardCodeDTO.OutwardCodeResponse.result.northings, Is.EqualTo(181778));
         }
     }
 }

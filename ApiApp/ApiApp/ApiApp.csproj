@@ -71,16 +71,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
-    <Compile Include="OutwardCodeService.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="PostcodesIOService\DataHandling\OutwardCodeDTO.cs" />
+    <Compile Include="PostcodesIOService\OutwardCodeService.cs" />
+    <Compile Include="PostcodesIOService\DataHandling\Model.cs" />
+    <Compile Include="PostcodesIOService\DataHandling\SinglePostcodeDTO.cs" />
+    <Compile Include="PostcodesIOService\HTTPManager\CallManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SinglePoscodeService.cs" />
+    <Compile Include="PostcodesIOService\SinglePoscodeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
